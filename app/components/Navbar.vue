@@ -24,18 +24,27 @@
             Home
           </NuxtLink>
           <NuxtLink 
-            to="/about" 
+            to="/legit" 
             class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
-            :class="{ 'text-blue-600': isActive('/about') }"
+            :class="{ 'text-blue-600': isActive('/legit') }"
           >
-            About Us
+            Get Started
           </NuxtLink>
+
           <NuxtLink 
-            to="/faq" 
+            to="/login" 
             class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
-            :class="{ 'text-blue-600': isActive('/faq') }"
+            :class="{ 'text-blue-600': isActive('/login') }"
           >
-            FAQ
+            Dashboard
+          </NuxtLink>
+
+          <NuxtLink 
+            to="/simple" 
+            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+            :class="{ 'text-blue-600': isActive('/simple') }"
+          >
+            Rules
           </NuxtLink>
           <NuxtLink 
             to="/promotions" 
@@ -43,10 +52,9 @@
             :class="{ 'text-blue-600': isActive('/promotions') }"
           >
             <span class="flex items-center">
-              Promotions
+              Affiliate
               <span class="ml-2 px-2 py-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs rounded-full">
-                Hot
-              </span>
+                coming...              </span>
             </span>
           </NuxtLink>
           <NuxtLink 
@@ -54,14 +62,9 @@
             class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
             :class="{ 'text-blue-600': isActive('/login') }"
           >
-            Login
+            Contact
           </NuxtLink>
-          <NuxtLink 
-            to="/dashboard" 
-            class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 hover:from-blue-700 hover:to-purple-700"
-          >
-            Dashboard
-          </NuxtLink>
+
         </div>
 
         <!-- Mobile menu button -->

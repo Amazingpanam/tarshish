@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
   app: {
     head: {
-      title: 'PropHero - Professional Prop Trading',
+      title: 'TarshishFunded- Professional Prop Trading',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
