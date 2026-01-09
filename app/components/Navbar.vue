@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-white shadow-lg">
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <!-- Logo -->
@@ -30,7 +30,6 @@
           >
             Get Started
           </NuxtLink>
-
           <NuxtLink 
             to="/dashboard" 
             class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
@@ -38,7 +37,6 @@
           >
             Dashboard
           </NuxtLink>
-
           <NuxtLink 
             to="/simple" 
             class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
@@ -54,24 +52,24 @@
             <span class="flex items-center">
               Affiliate
               <span class="ml-2 px-2 py-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs rounded-full">
-                coming...              </span>
+                coming...
+              </span>
             </span>
           </NuxtLink>
           <NuxtLink 
-            to="/login" 
+            to="/contact" 
             class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
-            :class="{ 'text-blue-600': isActive('/login') }"
+            :class="{ 'text-blue-600': isActive('/contact') }"
           >
             Contact
           </NuxtLink>
-
         </div>
 
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center">
           <button 
             @click="isMobileMenuOpen = !isMobileMenuOpen"
-            class="text-gray-700 hover:text-blue-600 focus:outline-none"
+            class="text-gray-700 hover:text-blue-600 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition-colors duration-200"
             aria-label="Toggle menu"
           >
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -82,12 +80,15 @@
         </div>
       </div>
 
-      <!-- Mobile Navigation Menu -->
-      <div v-if="isMobileMenuOpen" class="md:hidden bg-white border-t border-gray-200">
+      <!-- Mobile Navigation Menu - Fixed positioning -->
+      <div 
+        v-if="isMobileMenuOpen" 
+        class="md:hidden fixed left-0 right-0 top-16 bg-white border-t border-gray-200 shadow-lg z-40"
+      >
         <div class="px-2 pt-2 pb-3 space-y-1">
           <NuxtLink 
             to="/" 
-            class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md font-medium"
+            class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md font-medium transition-colors duration-200"
             :class="{ 'text-blue-600 bg-blue-50': isActive('/') }"
             @click="isMobileMenuOpen = false"
           >
@@ -95,40 +96,46 @@
           </NuxtLink>
           <NuxtLink 
             to="/legit" 
-            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
-            :class="{ 'text-blue-600': isActive('/legit') }"
+            class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md font-medium transition-colors duration-200"
+            :class="{ 'text-blue-600 bg-blue-50': isActive('/legit') }"
+            @click="isMobileMenuOpen = false"
           >
             Get Started
           </NuxtLink>
           <NuxtLink 
-            to="/login" 
-            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
-            :class="{ 'text-blue-600': isActive('/login') }"
+            to="/dashboard" 
+            class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md font-medium transition-colors duration-200"
+            :class="{ 'text-blue-600 bg-blue-50': isActive('/dashboard') }"
+            @click="isMobileMenuOpen = false"
           >
             Dashboard
           </NuxtLink>
-         <NuxtLink 
+          <NuxtLink 
             to="/simple" 
-            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
-            :class="{ 'text-blue-600': isActive('/simple') }"
+            class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md font-medium transition-colors duration-200"
+            :class="{ 'text-blue-600 bg-blue-50': isActive('/simple') }"
+            @click="isMobileMenuOpen = false"
           >
             Rules
           </NuxtLink>
-         <NuxtLink 
+          <NuxtLink 
             to="/promotions" 
-            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
-            :class="{ 'text-blue-600': isActive('/promotions') }"
+            class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md font-medium transition-colors duration-200"
+            :class="{ 'text-blue-600 bg-blue-50': isActive('/promotions') }"
+            @click="isMobileMenuOpen = false"
           >
-            <span class="flex items-center">
-              Affiliate
+            <span class="flex items-center justify-between">
+              <span>Affiliate</span>
               <span class="ml-2 px-2 py-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs rounded-full">
-                coming...              </span>
+                coming...
+              </span>
             </span>
           </NuxtLink>
           <NuxtLink 
-            to="/login" 
-            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
-            :class="{ 'text-blue-600': isActive('/login') }"
+            to="/contact" 
+            class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md font-medium transition-colors duration-200"
+            :class="{ 'text-blue-600 bg-blue-50': isActive('/contact') }"
+            @click="isMobileMenuOpen = false"
           >
             Contact
           </NuxtLink>
@@ -140,7 +147,7 @@
 
 <script setup>
 import { ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute } from '#imports'
 
 const isMobileMenuOpen = ref(false)
 const route = useRoute()
@@ -157,7 +164,7 @@ const isActive = (path) => {
 </script>
 
 <style scoped>
-/* Active link indicator */
+/* Active link indicator for desktop */
 .router-link-active {
   position: relative;
 }
@@ -171,5 +178,21 @@ const isActive = (path) => {
   height: 2px;
   background: linear-gradient(to right, #3b82f6, #8b5cf6);
   border-radius: 2px;
+}
+
+/* Mobile menu animation */
+.fixed {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
