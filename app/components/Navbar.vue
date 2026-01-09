@@ -32,9 +32,9 @@
           </NuxtLink>
 
           <NuxtLink 
-            to="/login" 
+            to="/dashboard" 
             class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
-            :class="{ 'text-blue-600': isActive('/login') }"
+            :class="{ 'text-blue-600': isActive('/dashboard') }"
           >
             Dashboard
           </NuxtLink>

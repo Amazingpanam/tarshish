@@ -1,342 +1,272 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <!-- Navigation -->
-    <!-- <Navbar /> -->
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-      <!-- Page Title -->
-      <div class="mb-8">
-        <h1 class="text-2xl font-bold text-gray-900 mb-2">My Challenge</h1>
-        <div class="flex space-x-4">
-          <button class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700">
-            Active Challenges
-          </button>
-          <button class="px-4 py-2 bg-gray-200 text-gray-700 text-sm font-medium rounded hover:bg-gray-300">
-            Challenge History
-          </button>
+    <!-- Navbar -->
+    <Navbar />
+    
+    <!-- Dashboard Header -->
+    <div class="bg-white shadow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900">Dashboard</h1>
+            <p class="text-gray-600 mt-1">Welcome back, Trader</p>
+          </div>
+          <div class="mt-4 sm:mt-0">
+            <div class="flex items-center space-x-4">
+              <div class="text-right">
+                <div class="text-sm text-gray-500">Account Balance</div>
+                <div class="text-xl font-bold text-green-600">₦125,450.00</div>
+              </div>
+              <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                T
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <!-- Dashboard Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- Left Column -->
-        <div class="space-y-8">
-          <!-- Failed Challenge Card -->
-          <div class="bg-white border border-gray-300 rounded-lg p-6">
-            <!-- Header with Login -->
-            <div class="mb-6">
-              <h2 class="text-lg font-bold text-gray-900 mb-1">Login: 2178750</h2>
-              <div class="text-sm text-gray-600">
-                <span class="font-medium">Login Info</span>
-                <span class="mx-2">•</span>
-                <span>Detail</span>
-              </div>
+    <!-- Main Dashboard Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Buy Account Card -->
+        <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
             </div>
+            <h3 class="text-xl font-bold text-gray-900">Buy Account</h3>
+          </div>
+          <p class="text-gray-600 mb-6">Purchase new trading accounts with different capital sizes</p>
+          <button class="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-lg hover:shadow-md transition-all duration-300">
+            View Accounts
+          </button>
+        </div>
 
-            <!-- Failure Reason Box -->
-            <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded">
-              <p class="font-bold text-red-800 mb-1">Failure Reason:</p>
-              <p class="text-red-700">Floating P/L Has Exceeded –1% Of Your Account Balance.</p>
+        <!-- My Account Card -->
+        <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
             </div>
-
-            <!-- Balance & Loss Stats -->
-            <div class="grid grid-cols-2 gap-4 mb-6">
-              <div>
-                <p class="text-gray-600 mb-1">Balance:</p>
-                <p class="text-2xl font-bold">$500</p>
-              </div>
-              <div>
-                <p class="text-gray-600 mb-1">Max Daily Loss</p>
-                <p class="text-2xl font-bold">$15</p>
-              </div>
+            <h3 class="text-xl font-bold text-gray-900">My Account</h3>
+          </div>
+          <div class="space-y-3 mb-6">
+            <div class="flex justify-between items-center">
+              <span class="text-gray-600">Active Accounts:</span>
+              <span class="font-bold">3</span>
             </div>
-
-            <!-- Result & Max Loss -->
-            <div class="grid grid-cols-2 gap-4 mb-6">
-              <div>
-                <p class="text-gray-600 mb-1">Result:</p>
-                <p class="text-xl font-bold text-red-600">Failed</p>
-              </div>
-              <div>
-                <p class="text-gray-600 mb-1">Max Total Loss</p>
-                <p class="text-xl font-bold">$25</p>
-              </div>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-600">Total Balance:</span>
+              <span class="font-bold text-green-600">₦85,000</span>
             </div>
-
-            <!-- Challenge Type -->
-            <div class="mb-6">
-              <p class="text-gray-600 mb-1">Challenge Type:</p>
-              <p class="text-lg font-bold">Instant</p>
-            </div>
-
-            <!-- Divider -->
-            <div class="border-t border-gray-300 my-6"></div>
-
-            <!-- Action Buttons -->
-            <div class="flex space-x-3">
-              <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-700 font-medium rounded hover:bg-gray-300">
-                View Details
-              </button>
-              <button class="flex-1 py-2 px-4 bg-blue-600 text-white font-medium rounded hover:bg-blue-700">
-                Retry Challenge
-              </button>
+            <div class="flex justify-between items-center">
+              <span class="text-gray-600">Profit/Loss:</span>
+              <span class="font-bold text-green-600">+₦12,450</span>
             </div>
           </div>
+          <button class="w-full py-3 bg-gradient-to-r from-green-600 to-green-700 text-white font-medium rounded-lg hover:shadow-md transition-all duration-300">
+            View Details
+          </button>
+        </div>
 
-          <!-- Another Failed Challenge -->
-          <div class="bg-white border border-gray-300 rounded-lg p-6">
-            <!-- Header with Login -->
-            <div class="mb-6">
-              <h2 class="text-lg font-bold text-gray-900 mb-1">Login: 1211775</h2>
-              <div class="text-sm text-gray-600">
-                <span class="font-medium">Login: 1211775</span>
-              </div>
+        <!-- Request Payout Card -->
+        <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
             </div>
-
-            <!-- Legend & Failure Reason -->
-            <div class="mb-6">
-              <p class="font-bold text-gray-800 mb-2">Legend:</p>
-              <div class="p-4 bg-red-50 border border-red-200 rounded">
-                <p class="font-bold text-red-800 mb-1">Failure Reason:</p>
-                <p class="text-red-700">Expiration Close</p>
-              </div>
-            </div>
-
-            <!-- Divider -->
-            <div class="border-t border-gray-300 my-6"></div>
-
-            <!-- Action Buttons -->
-            <div class="flex space-x-3">
-              <button class="flex-1 py-2 px-4 bg-gray-200 text-gray-700 font-medium rounded hover:bg-gray-300">
-                View Details
-              </button>
-              <button class="flex-1 py-2 px-4 bg-blue-600 text-white font-medium rounded hover:bg-blue-700">
-                Retry Challenge
-              </button>
-            </div>
+            <h3 class="text-xl font-bold text-gray-900">Request Payout</h3>
+          </div>
+          <p class="text-gray-600 mb-6">Withdraw your trading profits instantly. Minimum withdrawal: ₦5,000</p>
+          <div class="space-y-3">
+            <button class="w-full py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-medium rounded-lg hover:shadow-md transition-all duration-300">
+              Request Withdrawal
+            </button>
+            <button class="w-full py-3 border border-purple-600 text-purple-600 font-medium rounded-lg hover:bg-purple-50 transition-all duration-300">
+              View History
+            </button>
           </div>
         </div>
 
-        <!-- Right Column -->
-        <div class="space-y-8">
-          <!-- Account Management Section -->
-          <div class="bg-white border border-gray-300 rounded-lg p-6">
-            <h2 class="text-lg font-bold text-gray-900 mb-6">Account Management</h2>
-
-            <!-- Last Sub Section -->
-            <div class="mb-8">
-              <p class="font-bold text-gray-800 mb-2">Last Sub:</p>
-              <div class="p-4 bg-gray-100 border border-gray-300 rounded">
-                <p class="font-bold text-gray-900">Reset Acc</p>
-              </div>
+        <!-- Next Phase Request Card -->
+        <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
             </div>
-
-            <!-- Path Indicator -->
-            <div class="mb-8">
-              <p class="font-bold text-gray-800 mb-2">MINGW64/c/Users/USER/</p>
-              <div class="p-4 bg-gray-100 border border-gray-300 rounded">
-                <div class="flex items-center text-gray-700">
-                  <svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span>Ready for new challenge</span>
-                </div>
-              </div>
+            <h3 class="text-xl font-bold text-gray-900">Next Phase Request</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Upgrade to higher account tiers after meeting requirements</p>
+          <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-6">
+            <div class="text-sm text-yellow-800">
+              <span class="font-bold">Current Phase:</span> Level 2
             </div>
-
-            <!-- Chat Section -->
-            <div class="mb-8">
-              <p class="font-bold text-gray-800 mb-2">Start Chatting</p>
-              <button class="w-full py-3 px-4 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 flex items-center justify-center">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-                Open Live Support Chat
-              </button>
-            </div>
-
-            <!-- Detail Section -->
-            <div>
-              <p class="font-bold text-gray-800 mb-2">Detail:</p>
-              <div class="p-4 bg-blue-50 border border-blue-200 rounded">
-                <p class="text-gray-700">
-                  For detailed analysis of your challenge performance, 
-                  trading statistics, and improvement recommendations, 
-                  please contact our support team.
-                </p>
-              </div>
+            <div class="text-sm text-yellow-800">
+              <span class="font-bold">Next Phase:</span> Level 3 (₦200k Account)
             </div>
           </div>
+          <button class="w-full py-3 bg-gradient-to-r from-yellow-600 to-yellow-700 text-white font-medium rounded-lg hover:shadow-md transition-all duration-300">
+            Request Upgrade
+          </button>
+        </div>
 
-          <!-- Quick Stats -->
-          <div class="bg-white border border-gray-300 rounded-lg p-6">
-            <h2 class="text-lg font-bold text-gray-900 mb-6">Quick Stats</h2>
-            
-            <div class="grid grid-cols-2 gap-6">
-              <div class="text-center p-4 bg-blue-50 rounded-lg">
-                <p class="text-gray-600 text-sm mb-1">Total Challenges</p>
-                <p class="text-3xl font-bold">8</p>
-              </div>
-              <div class="text-center p-4 bg-green-50 rounded-lg">
-                <p class="text-gray-600 text-sm mb-1">Passed</p>
-                <p class="text-3xl font-bold text-green-600">3</p>
-              </div>
-              <div class="text-center p-4 bg-red-50 rounded-lg">
-                <p class="text-gray-600 text-sm mb-1">Failed</p>
-                <p class="text-3xl font-bold text-red-600">5</p>
-              </div>
-              <div class="text-center p-4 bg-purple-50 rounded-lg">
-                <p class="text-gray-600 text-sm mb-1">Success Rate</p>
-                <p class="text-3xl font-bold text-purple-600">38%</p>
-              </div>
+        <!-- Change Password Card -->
+        <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+              </svg>
             </div>
-
-            <!-- Progress Bar -->
-            <div class="mt-6">
-              <div class="flex justify-between text-sm text-gray-600 mb-1">
-                <span>Current Progress</span>
-                <span>45%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-3">
-                <div class="bg-blue-600 h-3 rounded-full" style="width: 45%"></div>
-              </div>
-            </div>
+            <h3 class="text-xl font-bold text-gray-900">Change Password</h3>
           </div>
+          <p class="text-gray-600 mb-6">Update your account password for enhanced security</p>
+          <button class="w-full py-3 bg-gradient-to-r from-red-600 to-red-700 text-white font-medium rounded-lg hover:shadow-md transition-all duration-300">
+            Change Password
+          </button>
+        </div>
 
-          <!-- Active Challenge -->
-          <div class="bg-white border border-gray-300 rounded-lg p-6">
-            <div class="flex justify-between items-center mb-6">
-              <h2 class="text-lg font-bold text-gray-900">Active Challenge</h2>
-              <span class="px-3 py-1 bg-green-100 text-green-800 text-sm font-bold rounded">
-                LIVE
+        <!-- KYC Details Card -->
+        <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">KYC Details</h3>
+          </div>
+          <div class="mb-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-gray-600">Verification Status:</span>
+              <span class="px-3 py-1 bg-green-100 text-green-800 text-sm font-bold rounded-full">
+                Verified
               </span>
             </div>
-
-            <div class="space-y-4">
-              <div>
-                <p class="text-gray-600 mb-1">Login ID:</p>
-                <p class="text-xl font-bold">3344556</p>
+            <div class="space-y-2">
+              <div class="flex items-center text-sm">
+                <span class="text-gray-500 w-32">Email:</span>
+                <span class="font-medium">verified</span>
               </div>
-              
-              <div class="grid grid-cols-2 gap-4">
-                <div>
-                  <p class="text-gray-600 mb-1">Account Size</p>
-                  <p class="text-lg font-bold">$2,500</p>
-                </div>
-                <div>
-                  <p class="text-gray-600 mb-1">Profit Target</p>
-                  <p class="text-lg font-bold text-green-600">$200</p>
-                </div>
+              <div class="flex items-center text-sm">
+                <span class="text-gray-500 w-32">Phone:</span>
+                <span class="font-medium">verified</span>
               </div>
-
-              <div class="grid grid-cols-2 gap-4">
-                <div>
-                  <p class="text-gray-600 mb-1">Current Profit</p>
-                  <p class="text-lg font-bold">$90</p>
-                </div>
-                <div>
-                  <p class="text-gray-600 mb-1">Days Left</p>
-                  <p class="text-lg font-bold">7</p>
-                </div>
+              <div class="flex items-center text-sm">
+                <span class="text-gray-500 w-32">ID:</span>
+                <span class="font-medium">verified</span>
               </div>
-
-              <button class="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg hover:shadow-lg">
-                Go to Trading Platform
-              </button>
             </div>
+          </div>
+          <button class="w-full py-3 border border-indigo-600 text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition-all duration-300">
+            Update Details
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Recent Activity Section -->
+      <div class="mt-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Recent Activity</h2>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Activity</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Account</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr v-for="activity in recentActivities" :key="activity.id" class="hover:bg-gray-50">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ activity.date }}</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ activity.type }}</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ activity.account }}</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium" :class="activity.amountClass">{{ activity.amount }}</td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span class="px-2 py-1 text-xs rounded-full" :class="activity.statusClass">{{ activity.status }}</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
-
-      <!-- Challenge History Table -->
-      <div class="mt-8 bg-white border border-gray-300 rounded-lg p-6">
-        <h2 class="text-lg font-bold text-gray-900 mb-6">Challenge History</h2>
-        
-        <div class="overflow-x-auto">
-          <table class="min-w-full divide-y divide-gray-200">
-            <thead>
-              <tr class="bg-gray-50">
-                <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Login ID</th>
-                <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Type</th>
-                <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Amount</th>
-                <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Result</th>
-                <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Date</th>
-                <th class="px-4 py-3 text-left text-xs font-bold text-gray-700 uppercase">Actions</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200">
-              <tr>
-                <td class="px-4 py-3 text-sm font-medium">2178750</td>
-                <td class="px-4 py-3 text-sm">Instant</td>
-                <td class="px-4 py-3 text-sm font-bold">$500</td>
-                <td class="px-4 py-3">
-                  <span class="px-3 py-1 text-xs font-bold bg-red-100 text-red-800 rounded">Failed</span>
-                </td>
-                <td class="px-4 py-3 text-sm text-gray-600">2024-12-15</td>
-                <td class="px-4 py-3">
-                  <button class="text-blue-600 hover:text-blue-800 font-medium text-sm">Details</button>
-                </td>
-              </tr>
-              <tr>
-                <td class="px-4 py-3 text-sm font-medium">1211775</td>
-                <td class="px-4 py-3 text-sm">Standard</td>
-                <td class="px-4 py-3 text-sm font-bold">$1,000</td>
-                <td class="px-4 py-3">
-                  <span class="px-3 py-1 text-xs font-bold bg-red-100 text-red-800 rounded">Failed</span>
-                </td>
-                <td class="px-4 py-3 text-sm text-gray-600">2024-11-28</td>
-                <td class="px-4 py-3">
-                  <button class="text-blue-600 hover:text-blue-800 font-medium text-sm">Details</button>
-                </td>
-              </tr>
-              <tr>
-                <td class="px-4 py-3 text-sm font-medium">3344556</td>
-                <td class="px-4 py-3 text-sm">Pro</td>
-                <td class="px-4 py-3 text-sm font-bold text-green-600">$2,500</td>
-                <td class="px-4 py-3">
-                  <span class="px-3 py-1 text-xs font-bold bg-green-100 text-green-800 rounded">Active</span>
-                </td>
-                <td class="px-4 py-3 text-sm text-gray-600">2024-12-20</td>
-                <td class="px-4 py-3">
-                  <button class="text-blue-600 hover:text-blue-800 font-medium text-sm">Trade</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <Footer></Footer>
     </div>
-    
+
+    <!-- Footer -->
+    <Footer />
   </div>
 </template>
 
 <script setup>
-import Footer from '~/components/Footer.vue';
 import Navbar from '~/components/Navbar.vue'
+import Footer from '~/components/Footer.vue'
+
+// Recent activities data
+const recentActivities = [
+  {
+    id: 1,
+    date: '2024-01-15',
+    type: 'Payout Request',
+    account: '₦100k Account',
+    amount: '₦12,450',
+    amountClass: 'text-green-600',
+    status: 'Completed',
+    statusClass: 'bg-green-100 text-green-800'
+  },
+  {
+    id: 2,
+    date: '2024-01-14',
+    type: 'Trade Profit',
+    account: '₦50k Account',
+    amount: '₦3,250',
+    amountClass: 'text-green-600',
+    status: 'Credited',
+    statusClass: 'bg-green-100 text-green-800'
+  },
+  {
+    id: 3,
+    date: '2024-01-13',
+    type: 'Account Purchase',
+    account: 'New Account',
+    amount: '₦28,000',
+    amountClass: 'text-red-600',
+    status: 'Active',
+    statusClass: 'bg-blue-100 text-blue-800'
+  },
+  {
+    id: 4,
+    date: '2024-01-12',
+    type: 'Payout Request',
+    account: '₦200k Account',
+    amount: '₦8,900',
+    amountClass: 'text-green-600',
+    status: 'Processing',
+    statusClass: 'bg-yellow-100 text-yellow-800'
+  },
+  {
+    id: 5,
+    date: '2024-01-11',
+    type: 'Phase Upgrade',
+    account: 'Level 2 → 3',
+    amount: '—',
+    amountClass: 'text-gray-600',
+    status: 'Approved',
+    statusClass: 'bg-green-100 text-green-800'
+  }
+]
 </script>
-
-<style scoped>
-/* Simple, clean styling matching the screenshot */
-.border {
-  border-width: 1px;
-}
-
-/* Font weights matching the screenshot */
-.font-bold {
-  font-weight: 700;
-}
-
-.font-medium {
-  font-weight: 600;
-}
-
-/* Table styling */
-thead tr {
-  background-color: #f9fafb;
-}
-
-tbody tr:hover {
-  background-color: #f8fafc;
-}
-</style>
