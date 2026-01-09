@@ -23,9 +23,9 @@
           <!-- Product Details -->
           <div class="space-y-8">
             <div class="space-y-4">
-              <h4 class="text-3xl md:text-4xl font-bold text-gray-900">Trade with N600k</h4>
+              <h4 class="text-3xl md:text-4xl font-bold text-gray-900">Trade with ₦{{ user_data.display_price }}</h4>
               <div class="flex items-center">
-                <h5 class="text-4xl md:text-5xl font-bold text-gray-900">N28,000.00</h5>
+                <h5 class="text-4xl md:text-5xl font-bold text-gray-900">₦{{ user_data.actual_price }}</h5>
                 <span class="ml-6 px-4 py-2 bg-green-100 text-green-800 text-sm font-bold rounded-full">
                   Available
                 </span>
@@ -50,9 +50,19 @@
 <script setup>
 import Footer from '~/components/Footer.vue';
 import Navbar from '~/components/Navbar.vue';
+import { ref, onMounted } from 'vue'
+import { useRoute } from '#imports'
+
+const route = useRoute()
+const user_data = ref({})
+onMounted(() => {
+  user_data.value = route.query
+  console.log('Received data:', user_data.value)
+})
 definePageMeta({
      middleware: function(to,fro){
-        console.log(to,fro)
+        user_data.value = to.query
+
 
      }
  })

@@ -94,48 +94,43 @@
             Home
           </NuxtLink>
           <NuxtLink 
-            to="/about" 
-            class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md font-medium"
-            :class="{ 'text-blue-600 bg-blue-50': isActive('/about') }"
-            @click="isMobileMenuOpen = false"
+            to="/legit" 
+            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+            :class="{ 'text-blue-600': isActive('/legit') }"
           >
-            About Us
+            Get Started
           </NuxtLink>
           <NuxtLink 
-            to="/faq" 
-            class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md font-medium"
-            :class="{ 'text-blue-600 bg-blue-50': isActive('/faq') }"
-            @click="isMobileMenuOpen = false"
+            to="/login" 
+            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+            :class="{ 'text-blue-600': isActive('/login') }"
           >
-            FAQ
+            Dashboard
           </NuxtLink>
-          <NuxtLink 
+         <NuxtLink 
+            to="/simple" 
+            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+            :class="{ 'text-blue-600': isActive('/simple') }"
+          >
+            Rules
+          </NuxtLink>
+         <NuxtLink 
             to="/promotions" 
-            class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md font-medium"
-            :class="{ 'text-blue-600 bg-blue-50': isActive('/promotions') }"
-            @click="isMobileMenuOpen = false"
+            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+            :class="{ 'text-blue-600': isActive('/promotions') }"
           >
-            <span class="flex items-center justify-between">
-              Promotions
-              <span class="px-2 py-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs rounded-full">
-                Hot
-              </span>
+            <span class="flex items-center">
+              Affiliate
+              <span class="ml-2 px-2 py-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs rounded-full">
+                coming...              </span>
             </span>
           </NuxtLink>
           <NuxtLink 
             to="/login" 
-            class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md font-medium"
-            :class="{ 'text-blue-600 bg-blue-50': isActive('/login') }"
-            @click="isMobileMenuOpen = false"
+            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+            :class="{ 'text-blue-600': isActive('/login') }"
           >
-            Login
-          </NuxtLink>
-          <NuxtLink 
-            to="/dashboard" 
-            class="block px-3 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-md font-semibold text-center"
-            @click="isMobileMenuOpen = false"
-          >
-            Dashboard
+            Contact
           </NuxtLink>
         </div>
       </div>

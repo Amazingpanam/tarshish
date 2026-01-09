@@ -13,19 +13,13 @@
         
         <!-- Content Section -->
         <div class="p-6">
-          <NuxtLink 
-            to="/payments" 
-            class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
-            
+          <!-- Use click event on the heading instead of NuxtLink -->
+          <h3 
+            class="text-xl font-bold text-gray-900 mb-2 hover:text-blue-600 transition-colors cursor-pointer"
+            @click="sendParam(account)"
           >
-            <h3 class="text-xl font-bold text-gray-900 mb-2 hover:text-blue-600 transition-colors cursor-pointer">
             Trade with ₦{{ account.display_price }}
           </h3>
-          </NuxtLink>
-          <!-- Title -->
-          <!-- <h3 class="text-xl font-bold text-gray-900 mb-2 hover:text-blue-600 transition-colors cursor-pointer">
-            Trade with ₦{{ account.display_price }}
-          </h3> -->
           
           <!-- Price -->
           <div class="mb-6">
@@ -38,6 +32,21 @@
 </template>
 
 <script setup>
+import { useRouter } from '#imports'
+
+const router = useRouter()
+
+function sendParam(obj) {
+  // Navigate to payments page with account data as query params
+  router.push({
+    path: '/payments',
+    query: {
+      display_price: obj.display_price,
+      actual_price: obj.actual_price
+    }
+  })
+}
+
 const accounts = [
   {
     display_price: '200k',
