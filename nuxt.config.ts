@@ -6,6 +6,9 @@
 
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
+  // plugins:[{
+  //   src:"~/plugins/amplify.js", mode:"client"
+  // }], 
   css: ['~/assets/css/tailwind.css'],
   app: {
     head: {

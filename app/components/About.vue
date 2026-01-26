@@ -13,12 +13,13 @@
         <div>
           <!-- Simplicity Section -->
           <div class="mb-10">
-            <h2 class="text-3xl text-center font-bold text-gray-900 mb-4">Simplicity</h2>
-            <p class="text-center" >
-              We have just 2 simple rules  
+            <h2 class="text-3xl text-center font-bold text-gray-900 mb-4">Simplicity By Design</h2>
+            <p class="text-xl text-center font-medium text-gray-800">
+              Easy rules set so traders can focus on execution, not restrictions.  
             </p>
-            <p class="text-center">The world's highest drawdown</p>
-            <p class="text-center">98% of prop firm rules removed.</p>
+            <p class="text-xl text-center font-medium text-gray-800">One of the highest drawdown allowances in the industry.
+</p>
+            <p class="text-xl text-center font-medium text-gray-800">Over 98% of restrictive prop firm rules removed. No hidden limits. No trailing traps.</p>
           </div>
           
         </div>
@@ -32,10 +33,10 @@
                 <div class="text-xl text-center font-medium text-gray-800">20% maximum drawdown</div>
               
                
-                <div class="text-xl text-center font-medium text-gray-800">No 1 - 4 minutes fast scalping</div>
+                <div class="text-xl text-center font-medium text-gray-800">No Ultra-Fast Scalping (1–4 Minutes)</div>
               
               
-                <div class="text-xl text-center font-medium text-gray-800">Trade at least once in 7 days</div>
+                <div class="text-xl text-center font-medium text-gray-800">At least one trade every 7 days to keep the account active</div>
 
         </div>
        
@@ -43,9 +44,12 @@
         
         <!-- Center the sign up button -->
         <div class="flex justify-center mt-8">
-          <button class="py-4 px-12 bg-gradient-to-r from-blue-600 to-green-600 text-white text-xl font-bold rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300">
-            Get Started
-          </button>
+          <NuxtLink 
+  to="/legit"
+  class="inline-block py-4 px-12 bg-gradient-to-r from-blue-600 to-green-600 text-white text-xl font-bold rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 no-underline"
+>
+  Get Started
+</NuxtLink>
         </div>
           
        <div>

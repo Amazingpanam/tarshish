@@ -8,7 +8,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
         const returnTo = encodeURIComponent(to.fullPath)
         
         // Return the navigation
-        return navigateTo(`/login`)
+        return navigateTo(`/signup`)
     }
     
     // If authenticated, continue navigation

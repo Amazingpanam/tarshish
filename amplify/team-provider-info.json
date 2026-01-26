@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tarshish-dev-5aeae-authRole",
+      "UnauthRoleArn": "arn:aws:iam::914337380384:role/amplify-tarshish-dev-5aeae-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::914337380384:role/amplify-tarshish-dev-5aeae-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-tarshish-dev-5aeae-deployment",
+      "UnauthRoleName": "amplify-tarshish-dev-5aeae-unauthRole",
+      "StackName": "amplify-tarshish-dev-5aeae",
+      "StackId": "arn:aws:cloudformation:us-east-1:914337380384:stack/amplify-tarshish-dev-5aeae/b4d80690-f2c9-11f0-80f4-12c49ee85b0d",
+      "AmplifyAppId": "d3kzbiywpgf5qg"
+    },
+    "categories": {
+      "auth": {
+        "tarshish66dc4661": {}
+      }
+    }
+  }
+}

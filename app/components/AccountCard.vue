@@ -5,7 +5,7 @@
         <!-- Image Section -->
         <div class="h-48 overflow-hidden bg-gray-100">
           <img 
-            src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            src="/images/acct.png" 
             alt="Trading Platform Dashboard"
             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
           />
@@ -50,23 +50,31 @@ function sendParam(obj) {
 const accounts = [
   {
     display_price: '200k',
-    actual_price: '5,000'
+    actual_price: '8,500'
   },
   {
     display_price: '400k',
-    actual_price: '15,000'
+    actual_price: '17,500'
   },
   {
     display_price: '600k',
-    actual_price: '20,000'
+    actual_price: '26,000'
   },
   {
     display_price: '800k',
-    actual_price: '40,000'
+    actual_price: '36,500'
+  },
+  {
+    display_price: '1m',
+    actual_price: '55,000'
   },
   {
     display_price: '1.5m',
-    actual_price: '60,000'
+    actual_price: '94,000'
+  },
+  {
+    display_price: '3m',
+    actual_price: '175,000'
   }
 ]
 </script>
