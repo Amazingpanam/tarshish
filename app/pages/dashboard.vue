@@ -41,13 +41,19 @@
             <h3 class="text-xl font-bold text-gray-900">Buy Account</h3>
           </div>
           <p class="text-gray-600 mb-6">Purchase new trading accounts with different capital sizes</p>
-          <button class="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-lg hover:shadow-md transition-all duration-300">
+          <button class="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-lg  transition-all duration-300">
+            <NuxtLink 
+            to="/legit" 
+            class=""
+            
+          >
             View Accounts
+          </NuxtLink>
           </button>
         </div>
 
         <!-- My Account Card -->
-        <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+        <!-- <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mr-4">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,10 +79,14 @@
           <button class="w-full py-3 bg-gradient-to-r from-green-600 to-green-700 text-white font-medium rounded-lg hover:shadow-md transition-all duration-300">
             View Details
           </button>
-        </div>
+        </div> -->
+
+        <ViewAccount></ViewAccount>
+
+
 
         <!-- Request Payout Card -->
-        <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+        <!-- <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,7 +104,9 @@
               View History
             </button>
           </div>
-        </div>
+        </div> -->
+        <PayOut></PayOut>
+
 
         <!-- Next Phase Request Card -->
         <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
@@ -214,6 +226,8 @@
 
 <script setup>
 import Navbar from '~/components/Navbar.vue'
+import ViewAccount from '~/components/ViewAccount'
+import PayOut from '~/components/PayOut'
 import Footer from '~/components/Footer.vue'
 
 // Recent activities data

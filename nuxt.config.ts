@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   // plugins:[{
   //   src:"~/plugins/amplify.js", mode:"client"
   // }], 
+  devtools: { enabled: false },
   css: ['~/assets/css/tailwind.css'],
   app: {
     head: {
