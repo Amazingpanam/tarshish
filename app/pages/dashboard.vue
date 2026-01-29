@@ -53,58 +53,10 @@
         </div>
 
         <!-- My Account Card -->
-        <!-- <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mr-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900">My Account</h3>
-          </div>
-          <div class="space-y-3 mb-6">
-            <div class="flex justify-between items-center">
-              <span class="text-gray-600">Active Accounts:</span>
-              <span class="font-bold">3</span>
-            </div>
-            <div class="flex justify-between items-center">
-              <span class="text-gray-600">Total Balance:</span>
-              <span class="font-bold text-green-600">₦85,000</span>
-            </div>
-            <div class="flex justify-between items-center">
-              <span class="text-gray-600">Profit/Loss:</span>
-              <span class="font-bold text-green-600">+₦12,450</span>
-            </div>
-          </div>
-          <button class="w-full py-3 bg-gradient-to-r from-green-600 to-green-700 text-white font-medium rounded-lg hover:shadow-md transition-all duration-300">
-            View Details
-          </button>
-        </div> -->
 
         <ViewAccount></ViewAccount>
 
-
-
-        <!-- Request Payout Card -->
-        <!-- <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900">Request Payout</h3>
-          </div>
-          <p class="text-gray-600 mb-6">Withdraw your trading profits instantly. Minimum withdrawal: ₦5,000</p>
-          <div class="space-y-3">
-            <button class="w-full py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-medium rounded-lg hover:shadow-md transition-all duration-300">
-              Request Withdrawal
-            </button>
-            <button class="w-full py-3 border border-purple-600 text-purple-600 font-medium rounded-lg hover:bg-purple-50 transition-all duration-300">
-              View History
-            </button>
-          </div>
-        </div> -->
+        <!-- Request Payout Card --> 
         <PayOut></PayOut>
 
 
@@ -229,6 +181,10 @@ import Navbar from '~/components/Navbar.vue'
 import ViewAccount from '~/components/ViewAccount'
 import PayOut from '~/components/PayOut'
 import Footer from '~/components/Footer.vue'
+
+ definePageMeta({
+     middleware:["auth"]
+  })
 
 // Recent activities data
 const recentActivities = [

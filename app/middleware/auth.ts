@@ -1,6 +1,7 @@
 // Named export for route middleware
 export default defineNuxtRouteMiddleware((to, from) => {
-    const authToken = useCookie('auth_token') // More specific cookie name
+    const authToken = useCookie('user') // More specific cookie name
+    
     
     // Check if user is authenticated
     if (!authToken.value) {
