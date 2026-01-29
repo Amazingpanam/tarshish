@@ -7,9 +7,11 @@ export default defineNuxtRouteMiddleware((to, from) => {
     if (!authToken.value) {
         // Optional: Store the intended destination
         const returnTo = encodeURIComponent(to.fullPath)
+        console.log("hello")
         
         // Return the navigation
         return navigateTo(`/signup`)
+        
     }
     
     // If authenticated, continue navigation
