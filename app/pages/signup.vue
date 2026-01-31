@@ -27,6 +27,7 @@ import "@aws-amplify/ui-vue/styles.css";
 import Navbar from '~/components/Navbar.vue'
 import { useUserAuth } from '~/stores/auth'
 import { Amplify } from 'aws-amplify';
+
 import config from '~/src/amplifyconfiguration.json'
 
 Amplify.configure(config);
@@ -62,9 +63,9 @@ const transferDataToSecureStorage = () => {
 }
 
 // Helper to extract user ID from key
-const getUserIdFromKey = (key) => {
-  // Key format: CognitoIdentityServiceProvider.clientId.userId.dataType
-  const parts = key.split('.')
-  return parts[2] || 'unknown'
-}
+// const getUserIdFromKey = (key) => {
+//   // Key format: CognitoIdentityServiceProvider.clientId.userId.dataType
+//   const parts = key.split('.')
+//   return parts[2] || 'unknown'
+// }
 </script>S
