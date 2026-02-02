@@ -28,7 +28,7 @@ import Navbar from '~/components/Navbar.vue'
 import { useUserAuth } from '~/stores/auth'
 import { Amplify } from 'aws-amplify';
 
-import config from '~/src/amplifyconfiguration.json'
+import config from '~/src/try.json'
 
 Amplify.configure(config);
 
