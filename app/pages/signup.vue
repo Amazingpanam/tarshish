@@ -50,7 +50,7 @@ const transferDataToSecureStorage = () => {
       localStorage.removeItem(refreshToken)
       localStorage.removeItem(idToken)
 
-      console.log("done")
+      console.log("done again")
 
     // Also get the main user data for Pinia
 
